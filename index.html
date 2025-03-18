@@ -27,42 +27,40 @@
     <a href="#ai-assistant" class="btn">Ask AI Now</a>
   </section>
 
-  <!-- Chapters Section -->
+  <!-- Class Selection Section -->
   <section id="chapters">
-    <h2>Explore Chapters</h2>
-    <div class="chapter-card">
-      <h3>Math</h3>
-      <p>Learn algebra, geometry, and more.</p>
-    </div>
-    <div class="chapter-card">
-      <h3>Science</h3>
-      <p>Discover physics, chemistry, and biology.</p>
-    </div>
-    <div class="chapter-card">
-      <h3>History</h3>
-      <p>Travel through time and learn about history.</p>
-    </div>
+    <h2>Select Your Class</h2>
+    <select id="classSelect" onchange="loadChapters()">
+      <option value="">Choose a class</option>
+      <!-- Classes from 1 to 12 -->
+      <script>
+        for (let i = 1; i <= 12; i++) {
+          document.write(`<option value="class${i}">Class ${i}</option>`);
+        }
+      </script>
+    </select>
+    <div id="chapterContainer"></div>
   </section>
 
   <!-- Notes Section -->
   <section id="notes">
     <h2>Download Notes</h2>
-    <p>Access class notes for quick revision.</p>
-    <a href="#" class="btn">Download Notes</a>
+    <p>Click to download notes for your selected class.</p>
+    <button id="downloadNotes" class="btn">Download Notes</button>
   </section>
 
   <!-- Q&A Section -->
   <section id="qa">
     <h2>Have Questions? Get Answers</h2>
-    <p>Ask anything and find answers.</p>
-    <textarea placeholder="Type your question..."></textarea>
-    <button class="btn">Submit</button>
+    <p>Ask anything and find answers using Wikipedia.</p>
+    <textarea id="userQuestion" placeholder="Type your question..."></textarea>
+    <button class="btn" onclick="submitQuestion()">Submit</button>
+    <p id="answerResponse"></p>
   </section>
 
   <!-- AI Assistant Section -->
   <section id="ai-assistant">
     <h2>AI Study Assistant</h2>
-    <p>Ask AI for help. Powered by Wikipedia.</p>
     <input id="question" type="text" placeholder="Ask anything..." />
     <button onclick="askAI()">Ask AI</button>
     <div id="ai-response"></div>
