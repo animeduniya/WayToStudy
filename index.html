@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Way to Study - By Rishab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <h1>Way to Study</h1>
+      <ul>
+        <li><a href="#chapters">Chapters</a></li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#qa">Q&A</a></li>
+        <li><a href="#ai-assistant">AI Assistant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to <span>Way to Study</span></h2>
+    <p>Your ultimate learning companion with notes, chapters, and AI-powered Q&A.</p>
+    <a href="#ai-assistant" class="btn">Ask AI Now</a>
+  </section>
+
+  <!-- Chapters Section -->
+  <section id="chapters">
+    <h2>Explore Chapters</h2>
+    <div class="chapter-card">
+      <h3>Math</h3>
+      <p>Learn algebra, geometry, and more.</p>
+    </div>
+    <div class="chapter-card">
+      <h3>Science</h3>
+      <p>Discover physics, chemistry, and biology.</p>
+    </div>
+    <div class="chapter-card">
+      <h3>History</h3>
+      <p>Travel through time and learn about history.</p>
+    </div>
+  </section>
+
+  <!-- Notes Section -->
+  <section id="notes">
+    <h2>Download Notes</h2>
+    <p>Access class notes for quick revision.</p>
+    <a href="#" class="btn">Download Notes</a>
+  </section>
+
+  <!-- Q&A Section -->
+  <section id="qa">
+    <h2>Have Questions? Get Answers</h2>
+    <p>Ask anything and find answers.</p>
+    <textarea placeholder="Type your question..."></textarea>
+    <button class="btn">Submit</button>
+  </section>
+
+  <!-- AI Assistant Section -->
+  <section id="ai-assistant">
+    <h2>AI Study Assistant</h2>
+    <p>Ask AI for help. Powered by Wikipedia.</p>
+    <input id="question" type="text" placeholder="Ask anything..." />
+    <button onclick="askAI()">Ask AI</button>
+    <div id="ai-response"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Way to Study by Rishab. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
